@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
+  button: { marginRight: theme.spacing(2), marginLeft: theme.spacing(2) },
   title: {
     display: "none",
     [theme.breakpoints.up("sm")]: {
@@ -38,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     },
     marginRight: theme.spacing(2),
     marginLeft: 0,
-    width: "100%",
+    width: '160px',
     [theme.breakpoints.up("sm")]: {
       marginLeft: theme.spacing(3),
       width: "auto",
@@ -63,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
     transition: theme.transitions.create("width"),
     width: "100%",
     [theme.breakpoints.up("md")]: {
-      width: "20ch",
+      width: "80ch",
     },
   },
   sectionDesktop: {
@@ -90,7 +91,7 @@ export default function PrimarySearchAppBar() {
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-  const isCategoriesMenuOpen = Boolean(categoriesMoreAnchorEl)
+  const isCategoriesMenuOpen = Boolean(categoriesMoreAnchorEl);
 
   const handleClick = (event) => {
     setCategoriesMoreAnchorEl(event.currentTarget);
@@ -185,6 +186,7 @@ export default function PrimarySearchAppBar() {
           </Typography>
 
           <Button
+            className={classes.button}
             aria-controls="simple-menu"
             aria-haspopup="true"
             onClick={handleClick}
