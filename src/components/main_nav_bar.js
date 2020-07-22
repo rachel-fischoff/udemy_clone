@@ -15,9 +15,9 @@ import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import AssignmentOutlinedIcon from "@material-ui/icons/AssignmentOutlined";
-import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutlined';
-import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
-import Avatar from '@material-ui/core/Avatar'
+import FavoriteBorderOutlinedIcon from "@material-ui/icons/FavoriteBorderOutlined";
+import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
+import Avatar from "@material-ui/core/Avatar";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     },
     marginRight: theme.spacing(2),
     marginLeft: 0,
-    width: '160px',
+    width: "160px",
     [theme.breakpoints.up("sm")]: {
       marginLeft: theme.spacing(3),
       width: "auto",
@@ -84,6 +84,11 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     [theme.breakpoints.up("md")]: {
       display: "none",
+    },
+  },
+  overrides: {
+    MuiPopoverPaper: {
+      top: "40px",
     },
   },
 }));
@@ -191,18 +196,26 @@ export default function PrimarySearchAppBar() {
           <Typography className={classes.title} variant="h6" noWrap>
             eLearning Platform
           </Typography>
-
+          {/* TODO: currently udemy has a drop down menu that drops on hover */}
           <Button
             className={classes.button}
             aria-controls="simple-menu"
             aria-haspopup="true"
-            onClick={handleClick}
+            onMouseOver={handleClick}
+            // onClick={handleClick}
           >
             Categories
           </Button>
           <Menu
             id="simple-menu"
+            variant="selectedMenu"
             anchorEl={categoriesMoreAnchorEl}
+            // TODO: implement an anchorOrigin where the menu drops down --
+            anchorOrigin={{
+              vertical: "bottom",
+              horizontal: "center",
+            }}
+            getContentAnchorEl={null}
             keepMounted
             open={Boolean(categoriesMoreAnchorEl)}
             onClose={handleClose}
@@ -249,6 +262,8 @@ export default function PrimarySearchAppBar() {
               onClick={handleProfileMenuOpen}
               color="inherit"
             >
+              {/* TODO: ADD a drawer from material UI and make it a button - 
+            should be a different component Persistent Drawer */}
               <Avatar>RF</Avatar>
             </IconButton>
           </div>
