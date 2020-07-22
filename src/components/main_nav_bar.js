@@ -17,6 +17,7 @@ import MoreIcon from "@material-ui/icons/MoreVert";
 import AssignmentOutlinedIcon from "@material-ui/icons/AssignmentOutlined";
 import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutlined';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
+import Avatar from '@material-ui/core/Avatar'
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
-  button: { marginRight: theme.spacing(2), marginLeft: theme.spacing(2) },
+  button: { marginLeft: theme.spacing(2) },
   title: {
     display: "none",
     [theme.breakpoints.up("sm")]: {
@@ -46,6 +47,10 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: theme.spacing(3),
       width: "auto",
     },
+  },
+  small: {
+    width: theme.spacing(3),
+    height: theme.spacing(3),
   },
   searchIcon: {
     padding: theme.spacing(0, 2),
@@ -223,17 +228,17 @@ export default function PrimarySearchAppBar() {
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="secondary">
-                <FavoriteBorderOutlinedIcon />
+                <FavoriteBorderOutlinedIcon fontSize="large" />
               </Badge>
             </IconButton>
             <IconButton aria-label="show 17 new notifications" color="inherit">
               <Badge badgeContent={17} color="secondary">
-                <NotificationsIcon />
+                <NotificationsIcon fontSize="large" />
               </Badge>
             </IconButton>
             <IconButton aria-label="show 17 new notifications" color="inherit">
               <Badge badgeContent={2} color="secondary">
-                <ShoppingCartOutlinedIcon />
+                <ShoppingCartOutlinedIcon fontSize="large" />
               </Badge>
             </IconButton>
             <IconButton
@@ -244,7 +249,7 @@ export default function PrimarySearchAppBar() {
               onClick={handleProfileMenuOpen}
               color="inherit"
             >
-              <AccountCircle />
+              <Avatar>RF</Avatar>
             </IconButton>
           </div>
           <div className={classes.sectionMobile}>
