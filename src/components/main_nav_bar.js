@@ -20,6 +20,7 @@ import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 import Avatar from "@material-ui/core/Avatar";
 
 const useStyles = makeStyles((theme) => ({
+
   grow: {
     flexGrow: 1,
   },
@@ -210,10 +211,8 @@ export default function PrimarySearchAppBar() {
             id="simple-menu"
             variant="selectedMenu"
             anchorEl={categoriesMoreAnchorEl}
-            // TODO: implement an anchorOrigin where the menu drops down --
             anchorOrigin={{
               vertical: "bottom",
-              horizontal: "center",
             }}
             getContentAnchorEl={null}
             keepMounted
