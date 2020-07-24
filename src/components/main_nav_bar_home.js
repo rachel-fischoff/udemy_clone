@@ -10,20 +10,15 @@ import Badge from "@material-ui/core/Badge";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import SearchIcon from "@material-ui/icons/Search";
-import AccountCircle from "@material-ui/icons/AccountCircle";
-import MailIcon from "@material-ui/icons/Mail";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-import MoreIcon from "@material-ui/icons/MoreVert";
 import AssignmentOutlinedIcon from "@material-ui/icons/AssignmentOutlined";
-import FavoriteBorderOutlinedIcon from "@material-ui/icons/FavoriteBorderOutlined";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
-import Avatar from "@material-ui/core/Avatar";
+import FormDialog from "./login";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     display: "flex",
-    width: '100%',
+    width: "100%",
     zIndex: 1,
   },
   grow: {
@@ -103,8 +98,8 @@ export default function LoginSearchAppBar() {
   );
 
   const isMenuOpen = Boolean(anchorEl);
-//   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-//   const isCategoriesMenuOpen = Boolean(categoriesMoreAnchorEl);
+  //   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+  //   const isCategoriesMenuOpen = Boolean(categoriesMoreAnchorEl);
 
   const handleClick = (event) => {
     setCategoriesMoreAnchorEl(event.currentTarget);
@@ -114,44 +109,44 @@ export default function LoginSearchAppBar() {
     setCategoriesMoreAnchorEl(null);
   };
 
-//   const handleProfileMenuOpen = (event) => {
-//     setAnchorEl(event.currentTarget);
-//   };
+  //   const handleProfileMenuOpen = (event) => {
+  //     setAnchorEl(event.currentTarget);
+  //   };
 
-//   const handleMobileMenuClose = () => {
-//     setMobileMoreAnchorEl(null);
-//   };
+  //   const handleMobileMenuClose = () => {
+  //     setMobileMoreAnchorEl(null);
+  //   };
 
   const handleMenuClose = () => {
     setAnchorEl(null);
     // handleMobileMenuClose();
   };
 
-//   const handleMobileMenuOpen = (event) => {
-//     setMobileMoreAnchorEl(event.currentTarget);
-//   };
+  //   const handleMobileMenuOpen = (event) => {
+  //     setMobileMoreAnchorEl(event.currentTarget);
+  //   };
 
-//   const menuId = "primary-search-account-menu";
-//   const renderMenu = (
-//     <Menu
-//       anchorEl={anchorEl}
-//       anchorOrigin={{ vertical: "top", horizontal: "right" }}
-//       id={menuId}
-//       keepMounted
-//       transformOrigin={{ vertical: "top", horizontal: "right" }}
-//       open={isMenuOpen}
-//       onClose={handleMenuClose}
-//     >
-//       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-//       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-//     </Menu>
-//   );
+  //   const menuId = "primary-search-account-menu";
+  //   const renderMenu = (
+  //     <Menu
+  //       anchorEl={anchorEl}
+  //       anchorOrigin={{ vertical: "top", horizontal: "right" }}
+  //       id={menuId}
+  //       keepMounted
+  //       transformOrigin={{ vertical: "top", horizontal: "right" }}
+  //       open={isMenuOpen}
+  //       onClose={handleMenuClose}
+  //     >
+  //       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+  //       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+  //     </Menu>
+  //   );
 
-//   const mobileMenuId = "primary-search-account-menu-mobile";
- 
+  //   const mobileMenuId = "primary-search-account-menu-mobile";
+
   return (
     <div className={classes.root}>
-      <AppBar >
+      <AppBar>
         <Toolbar>
           <AssignmentOutlinedIcon className={classes.menuButton} />
 
@@ -175,7 +170,7 @@ export default function LoginSearchAppBar() {
             // TODO: implement an anchorOrigin where the menu drops down --
             anchorOrigin={{
               vertical: "bottom",
-              horizontal: "left"
+              horizontal: "left",
             }}
             getContentAnchorEl={null}
             keepMounted
@@ -205,14 +200,15 @@ export default function LoginSearchAppBar() {
               <ShoppingCartOutlinedIcon fontSize="large" />
             </Badge>
           </IconButton>
-          <Button
+          {/* <Button
             className={classes.button}
             aria-controls="simple-menu"
             aria-haspopup="true"
             // onClick = {doSomething}
           >
             LOGIN
-          </Button>
+          </Button> */}
+          <FormDialog />
           <Button
             className={classes.button}
             aria-controls="simple-menu"
@@ -223,7 +219,6 @@ export default function LoginSearchAppBar() {
           >
             SIGN UP
           </Button>
-
         </Toolbar>
       </AppBar>
       {/* {renderMenu} */}
