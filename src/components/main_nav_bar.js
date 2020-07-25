@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -87,18 +87,13 @@ const useStyles = makeStyles((theme) => ({
       display: "none",
     },
   },
-  overrides: {
-    MuiPopoverPaper: {
-      top: "40px",
-    },
-  },
 }));
 
 export default function PrimarySearchAppBar() {
   const classes = useStyles();
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-  const [categoriesMoreAnchorEl, setCategoriesMoreAnchorEl] = React.useState(
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
+  const [categoriesMoreAnchorEl, setCategoriesMoreAnchorEl] = useState(
     null
   );
 
@@ -212,7 +207,7 @@ export default function PrimarySearchAppBar() {
             variant="selectedMenu"
             anchorEl={categoriesMoreAnchorEl}
             anchorOrigin={{
-              vertical: "bottom",
+              vertical: "bottom", horizontal: "left"
             }}
             getContentAnchorEl={null}
             keepMounted

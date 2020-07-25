@@ -6,12 +6,14 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
-import {makeStyles} from '@material-ui/styles'
+import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-    button: { marginLeft: theme.spacing(2) }, }) )
+  button: { marginLeft: theme.spacing(2) },
+}));
 
 export default function FormDialog() {
+  const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -24,7 +26,7 @@ export default function FormDialog() {
 
   return (
     <div>
-      <Button color="secondary" variant="contained" onClick={handleClickOpen}>
+      <Button color="secondary" variant="contained" className={classes.button} onClick={handleClickOpen}>
         LOGIN
       </Button>
       <Dialog

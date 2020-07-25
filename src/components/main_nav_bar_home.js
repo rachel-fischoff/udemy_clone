@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -91,9 +91,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function LoginSearchAppBar() {
   const classes = useStyles();
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-  const [categoriesMoreAnchorEl, setCategoriesMoreAnchorEl] = React.useState(
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
+  const [categoriesMoreAnchorEl, setCategoriesMoreAnchorEl] = useState(
     null
   );
 
