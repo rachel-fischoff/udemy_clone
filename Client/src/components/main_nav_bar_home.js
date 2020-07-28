@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -12,7 +12,7 @@ import Menu from "@material-ui/core/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 import AssignmentOutlinedIcon from "@material-ui/icons/AssignmentOutlined";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
-import FormDialog from "./login";
+import LoginButton from "./login_button";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -93,9 +93,7 @@ export default function LoginSearchAppBar() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
-  const [categoriesMoreAnchorEl, setCategoriesMoreAnchorEl] = useState(
-    null
-  );
+  const [categoriesMoreAnchorEl, setCategoriesMoreAnchorEl] = useState(null);
 
   const isMenuOpen = Boolean(anchorEl);
   //   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -200,15 +198,7 @@ export default function LoginSearchAppBar() {
               <ShoppingCartOutlinedIcon fontSize="large" />
             </Badge>
           </IconButton>
-          {/* <Button
-            className={classes.button}
-            aria-controls="simple-menu"
-            aria-haspopup="true"
-            // onClick = {doSomething}
-          >
-            LOGIN
-          </Button> */}
-          <FormDialog />
+          <LoginButton />
           <Button
             className={classes.button}
             aria-controls="simple-menu"

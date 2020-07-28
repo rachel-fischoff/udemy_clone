@@ -19,7 +19,7 @@ function App() {
 
           <Switch>
             {/* <Route exact path="/"> TODO: include some redirects /home /courses */}
-            {/* <Home/> */}
+            {/* <Login/> */}
             {/* </Route> */}
             {/* <Route exact path="/courses/:category> */}
             {/* <CategoryPage/> */}
