@@ -5,6 +5,7 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import PrimarySearchAppBar from "./components/main_nav_bar";
 import LoginSearchAppBar from "./components/main_nav_bar_home";
+import Login from './components/login'
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
 
           <Switch>
             {/* <Route exact path="/"> TODO: include some redirects /home /courses */}
-            {/* <Login/> */}
+            <Login/>
             {/* </Route> */}
             {/* <Route exact path="/courses/:category> */}
             {/* <CategoryPage/> */}
