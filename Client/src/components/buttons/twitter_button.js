@@ -21,13 +21,21 @@ export default function TwitterButton() {
   return (
     <div style={{ marginTop: "80px" }} className={classes.paper}>
       <Card>
-        <CardMedia
+        {/* <CardMedia
           className={classes.image}
           component="img"
           height="30"
           image={require("../../assets/sign-in-with-twitter-gray-1-png-img-fullhd-medium.png.img.fullhd.medium.png")}
           //   onClick={handleTwitterSignIn}
+        /> */}
+        <CardMedia
+          className={classes.image}
+          component="img"
+          height="90"
+          image={require("../../assets/Twitter_Social_Icon_Rounded_Square_Color.png")}
+          //   onClick={handleTwitterSignIn}
         />
+        Sign in with Twitter
       </Card>
     </div>
   );
