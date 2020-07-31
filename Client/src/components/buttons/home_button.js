@@ -17,7 +17,7 @@ export default function HomeButton() {
           pathname: "/",
         }}
       >
-        <IconButton color="inherit">
+        <IconButton className={classes.button} color="secondary">
           <HomeOutlinedIcon fontSize="large" />
         </IconButton>
       </Link>
