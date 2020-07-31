@@ -12,7 +12,7 @@ import Menu from "@material-ui/core/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 import AssignmentOutlinedIcon from "@material-ui/icons/AssignmentOutlined";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
-import LoginButton from "../login_button";
+import LoginButton from "../buttons/login_button";
 
 const useStyles = makeStyles((theme) => ({
   root: {
