@@ -1,11 +1,12 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { ThemeProvider } from "@material-ui/core/styles";
-import CssBaseline from "@material-ui/core/CssBaseline";
+import { BrowserRouter as Router, Switch, Route, Link } from "../node_modules/react-router-dom";
+import { ThemeProvider } from "../node_modules/@material-ui/core/styles";
+import CssBaseline from "../node_modules/@material-ui/core/CssBaseline";
 import PrimarySearchAppBar from "./components/main_nav_bar";
 import LoginSearchAppBar from "./components/main_nav_bar_home";
 import Login from './components/login'
+import GoogleLoginButton from './components/google_button'
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
 
           <Switch>
             {/* <Route exact path="/"> TODO: include some redirects /home /courses */}
-            <Login/>
+            <GoogleLoginButton/>
             {/* </Route> */}
             {/* <Route exact path="/courses/:category> */}
             {/* <CategoryPage/> */}

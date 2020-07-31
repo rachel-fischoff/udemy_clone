@@ -1,19 +1,19 @@
 import React from "react";
-import Avatar from "@material-ui/core/Avatar";
-import Button from "@material-ui/core/Button";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import TextField from "@material-ui/core/TextField";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
-import Link from "@material-ui/core/Link";
-import Grid from "@material-ui/core/Grid";
-import Box from "@material-ui/core/Box";
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
-import CardMedia from "@material-ui/core/CardMedia";
-import Card from "@material-ui/core/Card";
+import Avatar from "../../node_modules/@material-ui/core/Avatar";
+import Button from "../../node_modules/@material-ui/core/Button";
+import CssBaseline from "../../node_modules/@material-ui/core/CssBaseline";
+import TextField from "../../node_modules/@material-ui/core/TextField";
+import FormControlLabel from "../../node_modules/@material-ui/core/FormControlLabel";
+import Checkbox from "../../node_modules/@material-ui/core/Checkbox";
+import Link from "../../node_modules/@material-ui/core/Link";
+import Grid from "../../node_modules/@material-ui/core/Grid";
+import Box from "../../node_modules/@material-ui/core/Box";
+import LockOutlinedIcon from "../../node_modules/@material-ui/icons/LockOutlined";
+import Typography from "../../node_modules/@material-ui/core/Typography";
+import { makeStyles } from "../../node_modules/@material-ui/core/styles";
+import Container from "../../node_modules/@material-ui/core/Container";
+import CardMedia from "../../node_modules/@material-ui/core/CardMedia";
+import Card from "../../node_modules/@material-ui/core/Card";
 
 function Copyright() {
   return (

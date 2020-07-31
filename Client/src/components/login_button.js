@@ -1,7 +1,7 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
-import { makeStyles } from "@material-ui/core/styles";
-import { Link } from "react-router-dom";
+import Button from "../../node_modules/@material-ui/core/Button";
+import { makeStyles } from "../../node_modules/@material-ui/core/styles";
+import { Link } from "../../node_modules/react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   button: { marginLeft: theme.spacing(2) },
