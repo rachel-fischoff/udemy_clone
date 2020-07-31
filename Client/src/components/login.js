@@ -60,7 +60,7 @@ export default function SignIn() {
           <CardMedia
             component="img"
             height="40"
-            image={require("../assets/google_signin_buttons/web/1x/btn_google_signin_dark_normal_web.png")}
+            image={require("../assets/btn_google_signin_dark_normal_web@2x.png")}
             onClick={handleGoogleSignIn}
           />
         </Card>
