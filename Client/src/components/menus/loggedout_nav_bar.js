@@ -13,6 +13,8 @@ import SearchIcon from "@material-ui/icons/Search";
 import AssignmentOutlinedIcon from "@material-ui/icons/AssignmentOutlined";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 import LoginButton from "../buttons/login_button";
+import HomeButton from '../buttons/home_button'
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -198,6 +200,8 @@ export default function LoggedOutAppBar() {
             </Badge>
           </IconButton>
           <LoginButton />
+          <HomeButton/>
+
         </Toolbar>
       </AppBar>
       {/* {renderMenu} */}
