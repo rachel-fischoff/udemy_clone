@@ -10,9 +10,6 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
   },
-  image: {
-    objectFit: "contain",
-  },
   media:{
         width: 'auto',
   }
@@ -23,11 +20,10 @@ export default function FacebookButton() {
 
   return (
     <div style={{ marginTop: "80px" }} className={classes.paper}>
-      <Card className={classes.image}>
+      <Card >
         <CardMedia className={classes.media}
           component="img"
           height="90"
-          width ="50%"
           image={require("../../assets/facebook_login.png")}
           //   onClick={handleFacebookSignIn}
         />
