@@ -1,9 +1,0 @@
-+ @stripe/stripe-js@1.8.0
-+ typescript@3.9.7
-updated 2 packages and audited 2182 packages in 17.731s
-
-65 packages are looking for funding
-  run `npm fund` for details
-
-found 3 vulnerabilities (1 low, 2 high)
-  run `npm audit fix` to fix them, or `npm audit` for details
