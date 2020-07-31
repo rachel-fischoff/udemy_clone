@@ -157,7 +157,6 @@ export default function LoggedOutAppBar() {
             aria-controls="simple-menu"
             aria-haspopup="true"
             onMouseOver={handleClick}
-            // onClick={handleClick}
           >
             Categories
           </Button>
@@ -193,22 +192,12 @@ export default function LoggedOutAppBar() {
             />
           </div>
 
-          <IconButton aria-label="show 17 new notifications" color="inherit">
+          <IconButton aria-label="show 2 new notifications" color="inherit">
             <Badge badgeContent={2} color="secondary">
               <ShoppingCartOutlinedIcon fontSize="large" />
             </Badge>
           </IconButton>
           <LoginButton />
-          <Button
-            className={classes.button}
-            aria-controls="simple-menu"
-            aria-haspopup="true"
-            // onClick = {doSomething}
-            variant="contained"
-            color="secondary"
-          >
-            SIGN UP
-          </Button>
         </Toolbar>
       </AppBar>
       {/* {renderMenu} */}

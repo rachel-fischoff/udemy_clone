@@ -1,12 +1,11 @@
 import React from "react";
-import GoogleButton from "./../components/buttons/google_button";
 
 export default function Home() {
   return (
-    <div>
+    <div style={{ marginTop: "80px" }} >
       {" "}
       Home!
-      <GoogleButton />{" "}
+      Insert Category List ! 
     </div>
   );
 }
