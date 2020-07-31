@@ -11,7 +11,7 @@ import UserProvider from './contexts/user_provider';
 import Login from './pages/login'
 
 function App() {
-  return (
+  return ( 
     <div className="App">
     <Router history = {history} >
     
