@@ -32,10 +32,9 @@ export default function TwitterButton() {
           className={classes.image}
           component="img"
           height="90"
-          image={require("../../assets/Twitter_Social_Icon_Rounded_Square_Color.png")}
+          image={require("../../assets/twitter_button.png")}
           //   onClick={handleTwitterSignIn}
         />
-        Sign in with Twitter
       </Card>
     </div>
   );
