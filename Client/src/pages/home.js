@@ -6,9 +6,7 @@ export default function Home() {
     <div style={{ marginTop: "80px" }} >
       {" "}
       <CourseList/>
-      Home!
-      Insert Category List ! 
-      Side Drawer Filtering !
+      <CourseList/>
     </div>
   );
 }
