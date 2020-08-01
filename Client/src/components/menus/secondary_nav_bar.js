@@ -1,75 +1,101 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import ListSubheader from '@material-ui/core/ListSubheader';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import Collapse from '@material-ui/core/Collapse';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import SendIcon from '@material-ui/icons/Send';
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
-import StarBorder from '@material-ui/icons/StarBorder';
+import React, { useState } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+import Collapse from "@material-ui/core/Collapse";
+import ExpandLess from "@material-ui/icons/ExpandLess";
+import ExpandMore from "@material-ui/icons/ExpandMore";
+import BrushOutlinedIcon from "@material-ui/icons/BrushOutlined";
+import BuildOutlinedIcon from "@material-ui/icons/BuildOutlined";
+import ComputerOutlinedIcon from "@material-ui/icons/ComputerOutlined";
+import AssessmentIcon from "@material-ui/icons/Assessment";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100%',
+    width: "100%",
     backgroundColor: theme.palette.secondary.light,
     marginTop: "70px",
     display: "flex",
-  },
-  nested: {
-    paddingLeft: theme.spacing(4),
   },
 }));
 
 export default function SecondaryNav() {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(true);
+  const [openBackEnd, setOpenBackEnd] = useState(false);
+  const [openFrontEnd, setOpenFrontEnd] = useState(false);
+  const [openData, setOpenData] = useState(false);
+  const [openDevOps, setOpenDevOps] = useState(false);
 
-  const handleClick = () => {
-    setOpen(!open);
+  const handleClickBackEnd = () => {
+    setOpenBackEnd(!openBackEnd);
+  };
+  const handleClickFrontEnd = () => {
+    setOpenFrontEnd(!openFrontEnd);
+  };
+  const handleClickData = () => {
+    setOpenData(!openData);
+  };
+  const handleClickDevOps = () => {
+    setOpenDevOps(!openDevOps);
   };
 
   return (
-    <List
-      component="nav"
-      className={classes.root}
-    >
-      <ListItem button>
+    <List component="nav" className={classes.root}>
+      <ListItem button onClick={handleClickBackEnd}>
         <ListItemIcon>
-          <SendIcon />
+          <ComputerOutlinedIcon />
         </ListItemIcon>
         <ListItemText primary="Back End" />
+        {openBackEnd ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
-      <ListItem button>
+      <Collapse in={openBackEnd} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+          <ListItem button>
+            <ListItemText primary="Functional Programming" />
+          </ListItem>
+        </List>
+      </Collapse>
+      <ListItem button onClick={handleClickFrontEnd}>
         <ListItemIcon>
-          <DraftsIcon />
+          <BrushOutlinedIcon />
         </ListItemIcon>
         <ListItemText primary="Front End" />
+        {openFrontEnd ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
-      <ListItem button>
+      <Collapse in={openFrontEnd} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+          <ListItem button>
+            <ListItemText primary="React" />
+          </ListItem>
+        </List>
+      </Collapse>
+      <ListItem button onClick={handleClickData}>
         <ListItemIcon>
-          <DraftsIcon />
+          <AssessmentIcon />
         </ListItemIcon>
-        <ListItemText primary="Full Stack" />
+        <ListItemText primary="Data" />
+        {openData ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
-      <ListItem button onClick={handleClick}>
+      <Collapse in={openData} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+          <ListItem button>
+            <ListItemText primary="Machine Learning" />
+          </ListItem>
+        </List>
+      </Collapse>
+      <ListItem button onClick={handleClickDevOps}>
         <ListItemIcon>
-          <InboxIcon />
+          <BuildOutlinedIcon />
         </ListItemIcon>
         <ListItemText primary="Dev Ops" />
-        {open ? <ExpandLess /> : <ExpandMore />}
+        {openDevOps ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
-      <Collapse in={open} timeout="auto" unmountOnExit>
+      <Collapse in={openDevOps} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-          <ListItem button className={classes.nested}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText primary="Starred" />
+          <ListItem button>
+            <ListItemText primary="Deployment" />
           </ListItem>
         </List>
       </Collapse>
