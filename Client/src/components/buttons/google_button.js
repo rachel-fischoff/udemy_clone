@@ -15,6 +15,10 @@ const useStyles = makeStyles((theme) => ({
 export default function GoogleButton() {
   const classes = useStyles();
 
+  const handleGoogleSignIn = () => {
+    href  = "auth/google"
+  }
+
   return (
     <div style={{ marginTop: "80px" }} className={classes.paper}>
       <Card>
