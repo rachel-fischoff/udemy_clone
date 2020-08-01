@@ -16,7 +16,7 @@ export default function GoogleButton() {
   const classes = useStyles();
 
   const handleGoogleSignIn = () => {
-    window.open("auth/google", "_blank");
+    window.open("auth/google");
   };
 
   return (

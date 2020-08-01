@@ -6,7 +6,7 @@ const userSchema = new Schema({
     googleId: String,
     facebookId: String,
     twitterId: String,
-    email: {type: String, unique: true, lowercase: true},
+    email: {type: String, unique: true, lowercase: true, sparse:true},
     profile: {
         name: {type: String, default: ''},
         image: {type: String, default: ''},
