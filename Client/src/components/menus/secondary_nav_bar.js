@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import clsx from 'clsx';
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
@@ -18,6 +19,16 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.secondary.light,
     marginTop: "70px",
     display: "flex",
+  },
+  expand: {
+    transform: 'rotate(0deg)',
+    marginLeft: 'auto',
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.shortest,
+    }),
+  },
+  expandOpen: {
+    transform: 'rotate(180deg)',
   },
 }));
 
@@ -43,7 +54,9 @@ export default function SecondaryNav() {
 
   return (
     <List component="nav" className={classes.root}>
-      <ListItem button onClick={handleClickBackEnd}>
+      <ListItem button onClick={handleClickBackEnd}className={clsx(classes.expand, {
+            [classes.expandOpen]: openBackEnd,
+          })}>
         <ListItemIcon>
           <ComputerOutlinedIcon />
         </ListItemIcon>
@@ -93,7 +106,7 @@ export default function SecondaryNav() {
         {openDevOps ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
       <Collapse in={openDevOps} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding>
+        <List component="div" disablePadding direction="column" >
           <ListItem button>
             <ListItemText primary="Deployment" />
           </ListItem>

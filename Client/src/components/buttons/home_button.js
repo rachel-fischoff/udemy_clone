@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
 
 const useStyles = makeStyles((theme) => ({
-  button: { marginLeft: theme.spacing(2) },
+  button: { marginLeft: theme.spacing(2), color: "#fff" },
 }));
 
 export default function HomeButton() {
