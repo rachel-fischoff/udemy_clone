@@ -18,13 +18,13 @@ export default function CourseList() {
         <Grid item sm={3}>
           <CourseThumbnail />
         </Grid>
-        <Grid item justify="center" direction="row" alignItems="center" sm={3}>
+        <Grid item sm={3}>
           <CourseThumbnail />
         </Grid>
-        <Grid item justify="center" direction="row" alignItems="center" sm={3}>
+        <Grid item sm={3}>
           <CourseThumbnail />
         </Grid>
-        <Grid item justify="center" direction="row" alignItems="center" sm={3}>
+        <Grid item sm={3}>
           <CourseThumbnail />
         </Grid>
       </Grid>

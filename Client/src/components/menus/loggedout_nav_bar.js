@@ -13,8 +13,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import AssignmentOutlinedIcon from "@material-ui/icons/AssignmentOutlined";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 import LoginButton from "../buttons/login_button";
-import HomeButton from '../buttons/home_button'
-
+import HomeButton from "../buttons/home_button";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,8 +43,8 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: fade(theme.palette.common.white, 0.25),
     },
     marginRight: theme.spacing(2),
-    marginLeft: 0,
-    width: "160px",
+    marginLeft: theme.spacing(2),
+    width: "80%",
     [theme.breakpoints.up("sm")]: {
       marginLeft: theme.spacing(3),
       width: "auto",
@@ -89,72 +88,73 @@ const useStyles = makeStyles((theme) => ({
       display: "none",
     },
   },
+  tool: {
+    alignSelf: 'center',
+  },
 }));
 
 export default function LoggedOutAppBar() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
-  const [categoriesMoreAnchorEl, setCategoriesMoreAnchorEl] = useState(null);
 
   const isMenuOpen = Boolean(anchorEl);
-  //   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-  //   const isCategoriesMenuOpen = Boolean(categoriesMoreAnchorEl);
+  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
   const handleClick = (event) => {
-    setCategoriesMoreAnchorEl(event.currentTarget);
+    setAnchorEl(event.currentTarget);
   };
 
   const handleClose = () => {
-    setCategoriesMoreAnchorEl(null);
+    setAnchorEl(null);
   };
 
-  //   const handleProfileMenuOpen = (event) => {
-  //     setAnchorEl(event.currentTarget);
-  //   };
+    const handleProfileMenuOpen = (event) => {
+      setAnchorEl(event.currentTarget);
+    };
 
-  //   const handleMobileMenuClose = () => {
-  //     setMobileMoreAnchorEl(null);
-  //   };
+    const handleMobileMenuClose = () => {
+      setMobileMoreAnchorEl(null);
+    };
 
   const handleMenuClose = () => {
     setAnchorEl(null);
-    // handleMobileMenuClose();
+    handleMobileMenuClose();
   };
 
-  //   const handleMobileMenuOpen = (event) => {
-  //     setMobileMoreAnchorEl(event.currentTarget);
-  //   };
+    const handleMobileMenuOpen = (event) => {
+      setMobileMoreAnchorEl(event.currentTarget);
+    };
 
-  //   const menuId = "primary-search-account-menu";
-  //   const renderMenu = (
-  //     <Menu
-  //       anchorEl={anchorEl}
-  //       anchorOrigin={{ vertical: "top", horizontal: "right" }}
-  //       id={menuId}
-  //       keepMounted
-  //       transformOrigin={{ vertical: "top", horizontal: "right" }}
-  //       open={isMenuOpen}
-  //       onClose={handleMenuClose}
-  //     >
-  //       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-  //       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-  //     </Menu>
-  //   );
+    const menuId = "primary-search-account-menu";
+    const renderMenu = (
+      <Menu
+        anchorEl={anchorEl}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        id={menuId}
+        keepMounted
+        transformOrigin={{ vertical: "top", horizontal: "right" }}
+        open={isMenuOpen}
+        onClose={handleMenuClose}
+      >
+        <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+        <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      </Menu>
+    );
 
-  //   const mobileMenuId = "primary-search-account-menu-mobile";
+    const mobileMenuId = "primary-search-account-menu-mobile";
 
   return (
     <div className={classes.root}>
       <AppBar>
-        <Toolbar>
+        <Toolbar className={classes.tool}>
           <AssignmentOutlinedIcon className={classes.menuButton} />
 
           <Typography className={classes.title} variant="h6" noWrap>
             eLearning Platform
           </Typography>
           {/* TODO: currently udemy has a drop down menu that drops on hover */}
-          <Button
+          {/* <Button
             className={classes.button}
             aria-controls="simple-menu"
             aria-haspopup="true"
@@ -178,8 +178,8 @@ export default function LoggedOutAppBar() {
           >
             <MenuItem onClick={handleClose}>Category1</MenuItem>
             <MenuItem onClick={handleClose}>Category2</MenuItem>
-            <MenuItem onClick={handleClose}>Category3</MenuItem>
-          </Menu>
+            <MenuItem onClick={handleClose}>Category3</MenuItem> */}
+          {/* </Menu> */}
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -200,8 +200,7 @@ export default function LoggedOutAppBar() {
             </Badge>
           </IconButton>
           <LoginButton />
-          <HomeButton/>
-
+          <HomeButton />
         </Toolbar>
       </AppBar>
       {/* {renderMenu} */}
