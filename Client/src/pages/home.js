@@ -4,7 +4,7 @@ import SecondaryNav from "./../components/menus/secondary_nav_bar";
 
 export default function Home() {
   return (
-    <div style={{ marginTop: "80px" }} >
+    <div >
       <SecondaryNav/>
       {" "}
       <CourseList/>

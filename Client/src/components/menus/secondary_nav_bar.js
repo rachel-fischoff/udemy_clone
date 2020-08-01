@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     backgroundColor: theme.palette.secondary.light,
-    marginTop: "60px",
+    marginTop: "70px",
     display: "flex",
   },
   nested: {
@@ -42,19 +42,25 @@ export default function SecondaryNav() {
         <ListItemIcon>
           <SendIcon />
         </ListItemIcon>
-        <ListItemText primary="Sent mail" />
+        <ListItemText primary="Back End" />
       </ListItem>
       <ListItem button>
         <ListItemIcon>
           <DraftsIcon />
         </ListItemIcon>
-        <ListItemText primary="Drafts" />
+        <ListItemText primary="Front End" />
+      </ListItem>
+      <ListItem button>
+        <ListItemIcon>
+          <DraftsIcon />
+        </ListItemIcon>
+        <ListItemText primary="Full Stack" />
       </ListItem>
       <ListItem button onClick={handleClick}>
         <ListItemIcon>
           <InboxIcon />
         </ListItemIcon>
-        <ListItemText primary="Inbox" />
+        <ListItemText primary="Dev Ops" />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
       <Collapse in={open} timeout="auto" unmountOnExit>
