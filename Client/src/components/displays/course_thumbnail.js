@@ -9,6 +9,13 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles({
+  overrides: {
+    MuiButton: {
+      textPrimary: {
+        color: "#2196f3",
+      }
+    },
+  },
   root: {
     maxWidth: 240,
     alignItems: "center",
@@ -20,7 +27,9 @@ const useStyles = makeStyles({
   },
   action: {
     display: "block",
-  },
+  
+
+  }
 });
 
 export default function CourseThumbnail() {
@@ -48,10 +57,10 @@ export default function CourseThumbnail() {
         </CardContent>
       </CardActionArea>
       <CardActions className={classes.action}>
-        <Button size="small" color="primary">
+        <Button size="small" color="secondary">
           Share
         </Button>
-        <Button size="small" color="primary">
+        <Button size="small" color="secondary" >
           Learn More
         </Button>
       </CardActions>

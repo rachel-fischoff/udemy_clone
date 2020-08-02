@@ -14,6 +14,7 @@ import AssignmentOutlinedIcon from "@material-ui/icons/AssignmentOutlined";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 import LoginButton from "../buttons/login_button";
 import HomeButton from "../buttons/home_button";
+import ToogleThemeButton from '../buttons/toogle_light_dark_theme'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -201,6 +202,7 @@ export default function LoggedOutAppBar() {
           </IconButton>
           <LoginButton />
           <HomeButton />
+          <ToogleThemeButton/>
         </Toolbar>
       </AppBar>
       {/* {renderMenu} */}
