@@ -4,7 +4,7 @@ import { Router, Route } from "../node_modules/react-router-dom";
 import { ThemeProvider } from "../node_modules/@material-ui/core/styles";
 import CssBaseline from "../node_modules/@material-ui/core/CssBaseline";
 import theme from "./theme";
-import LoggedInAppBar from "./components/menus/loggedin_nav_bar";
+import LoggedInAppBar from "./components/menus/loggedin_appbar";
 import LoggedOutAppBar from "./components/menus/loggedout_nav_bar";
 import Home from "./pages/home";
 import history from "./history";
@@ -20,7 +20,7 @@ function App() {
           <CssBaseline />
           <UserProvider>
             <Route path="/" component={LoggedOutAppBar} />
-            {/* <Route path= "/profile" component={profile} /> */}
+            {/* <Route path= "/profile" component={Profile} /> */}
           </UserProvider>
           <Route path="/" exact component={Home} />
           <Route path="/login" exact component={Login} />
